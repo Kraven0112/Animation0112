@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 spin</title>
+    <style>
+        .container
+        {
+            position: absolute;
+            margin: auto;
+            inset: 0;
+            width:400px;
+            height: 400px;
+            border: 5px solid black;
+            border-radius: 50%;
+            background-image: linear-gradient(360deg,green,blue,red);
+            animation: spin  0.5s infinite linear;
+            /* animation-iteration-count: infinite; */
+        }
+        
+        @keyframes spin{
+            0%{
+                background-image: linear-gradient(360deg,green,orange,blue); rotate: 360deg;
+            }
+
+            25%{
+                background-image: linear-gradient(360deg,red,magenta,orange);
+            }
+
+            50%{
+                background-image: linear-gradient(360deg,blue,purple,magenta);
+            }
+
+            75%{
+                background-image: linear-gradient(360deg,green,red,yellow);
+            }
+            100%{
+                background-image: linear-gradient(360deg,blue,magenta,green);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
